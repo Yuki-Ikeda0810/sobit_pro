@@ -1,0 +1,12 @@
+<launch>
+
+  <!--arm and head control-->
+  <include file="$(find sobit_pro_control)/launch/sobit_pro_arm_head_control.launch"/>
+
+  <!--wheel control-->
+  <include file="$(find sobit_pro_control)/launch/sobit_pro_wheel_control.launch"/>
+
+  <!--use library-->
+  <rosparam command="load" file="$(find sobit_pro_library)/config/sobit_pro_pose.yaml"/>
+
+</launch>
